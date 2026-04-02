@@ -63,8 +63,10 @@
 <a class="font-label text-[10px] uppercase tracking-[0.2em] text-secondary hover:text-primary transition-colors" href="#gallery">Galéria</a>
 <a class="font-label text-[10px] uppercase tracking-[0.2em] text-secondary hover:text-primary transition-colors" href="#about">Rólam</a>
 <a class="font-label text-[10px] uppercase tracking-[0.2em] text-secondary hover:text-primary transition-colors" href="#contact">Kapcsolat</a>
-</div>
-<a class="hidden lg:block bg-primary text-on-primary px-8 py-2.5 rounded-full font-label text-[10px] uppercase tracking-[0.2em] hover:bg-tertiary transition-all" href="tel:+36203801710">Tel:+36203801710</a>
+</div><button class="md:hidden flex items-center text-on-surface hover:text-primary transition-colors focus:outline-none" id="menu-open">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
+<a class="hidden lg:block bg-primary text-on-primary px-8 py-2.5 rounded-full font-label text-[10px] uppercase tracking-[0.2em] hover:bg-tertiary transition-all" href="tel:+36123456789">Foglalás</a>
 </nav>
 <!-- Hero/Home Section -->
 <section class="relative min-h-[1024px] flex items-center pt-24 pb-20 px-6 lg:px-12 overflow-hidden bg-background" data-stitch-vh="min-h-[1024px]===min-h-screen" id="home">
@@ -318,4 +320,37 @@
         }
     });
 </script>
-</body></html>
+<!-- Mobile Menu Overlay -->
+<div class="fixed z-[100] bg-background transform translate-x-full transition-transform duration-500 ease-in-out md:hidden flex flex-col items-center justify-center top-0 right-0 w-64 h-auto min-h-[300px] rounded-bl-3xl shadow-2xl p-8" id="mobile-menu">
+<button class="absolute top-6 right-6 text-on-surface hover:text-primary transition-colors focus:outline-none top-4 right-4" id="menu-close">
+<span class="material-symbols-outlined text-2xl">close</span>
+</button>
+<nav class="flex flex-col items-center gap-5 items-start pt-8">
+<a class="font-headline italic text-on-surface hover:text-primary transition-colors text-xl" href="#home">Kezdőlap</a>
+<a class="font-headline italic text-secondary hover:text-primary transition-colors text-xl" href="#services">Szolgáltatások</a>
+<a class="font-headline italic text-secondary hover:text-primary transition-colors text-xl" href="#gallery">Galéria</a>
+<a class="font-headline italic text-secondary hover:text-primary transition-colors text-xl" href="#about">Rólam</a>
+<a class="font-headline italic text-secondary hover:text-primary transition-colors text-xl" href="#contact">Kapcsolat</a>
+<a class="mt-4 bg-primary text-on-primary px-10 py-4 rounded-full font-label text-sm uppercase tracking-[0.2em] hover:bg-tertiary transition-all shadow-xl px-6 py-2.5 text-[10px] mt-2" href="#contact">Foglalás</a>
+</nav>
+</div><script>
+  const menuOpen = document.getElementById('menu-open');
+  const menuClose = document.getElementById('menu-close');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileLinks = mobileMenu.querySelectorAll('a');
+
+  const toggleMenu = () => {
+    mobileMenu.classList.toggle('translate-x-full');
+    document.body.classList.toggle('overflow-hidden');
+  };
+
+  menuOpen.addEventListener('click', toggleMenu);
+  menuClose.addEventListener('click', toggleMenu);
+  
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('translate-x-full');
+      document.body.classList.remove('overflow-hidden');
+    });
+  });
+</script></body></html>
