@@ -1,26 +1,321 @@
 ---
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} >
-    <title>Angyali Szépségszalon</title>
-  </head>
-  <body>
-    <a href="/">Főoldal</a>
-    <a href="/arak/">Árak</a>
-    <a href="/szolgaltatasok/">Szolgáltatások</a>
-    <a href="/galeria/">Galéria</a>
-	<a href="/rolam/">Rólam</a>
+<html class="light scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Angyali Szépségszalon | High-Tech Hair Architecture</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;600;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "background": "#FDFCFB", // Warm Beige/Bone
+              "surface": "#F9F6F3",
+              "surface-variant": "#F4F1EE",
+              "primary": "#5E4B3C", // Sophisticated Warm Brown from Atelier Bloom DS
+              "primary-dark": "#4A3B2F",
+              "primary-container": "#F2EFEB",
+              "on-primary": "#FFFFFF",
+              "secondary": "#8C837D", // Muted Taupe
+              "on-secondary": "#1C1917",
+              "tertiary": "#2C2723", // Deep Umber
+              "on-background": "#1C1917",
+              "on-surface": "#1C1917",
+              "on-surface-variant": "#57534E",
+              "outline": "#E7E2DD",
+              "outline-variant": "#F4F1EE",
+              "champagne": "#F9F6F3"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "9999px", "lg": "9999px", "xl": "9999px", "full": "9999px"}, // Updated to ROUND_FULL per DS
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      }
+      .bg-glass { background: rgba(253, 252, 251, 0.85); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(94, 75, 60, 0.1); }
+      .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+      .reveal.active { opacity: 1; transform: translateY(0); }
+      .img-hover-zoom { overflow: hidden; }
+      .img-hover-zoom img { transition: transform 0.8s ease; }
+      .img-hover-zoom:hover img { transform: scale(1.05); }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}[type='text'],input:where(:not([type])),[type='email'],[type='url'],[type='password'],[type='number'],[type='date'],[type='datetime-local'],[type='month'],[type='search'],[type='tel'],[type='time'],[type='week'],[multiple],textarea,select{-webkit-appearance:none;appearance:none;background-color:#fff;border-color:#6b7280;border-width:1px;border-radius:0px;padding-top:0.5rem;padding-right:0.75rem;padding-bottom:0.5rem;padding-left:0.75rem;font-size:1rem;line-height:1.5rem;--tw-shadow:0 0 #0000;}[type='text']:focus, input:where(:not([type])):focus, [type='email']:focus, [type='url']:focus, [type='password']:focus, [type='number']:focus, [type='date']:focus, [type='datetime-local']:focus, [type='month']:focus, [type='search']:focus, [type='tel']:focus, [type='time']:focus, [type='week']:focus, [multiple]:focus, textarea:focus, select:focus{outline:2px solid transparent;outline-offset:2px;--tw-ring-inset:var(--tw-empty,/*!*/ /*!*/);--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:#2563eb;--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);border-color:#2563eb}input::placeholder,textarea::placeholder{color:#6b7280;opacity:1}::-webkit-datetime-edit-fields-wrapper{padding:0}::-webkit-date-and-time-value{min-height:1.5em;text-align:inherit}::-webkit-datetime-edit{display:inline-flex}::-webkit-datetime-edit,::-webkit-datetime-edit-year-field,::-webkit-datetime-edit-month-field,::-webkit-datetime-edit-day-field,::-webkit-datetime-edit-hour-field,::-webkit-datetime-edit-minute-field,::-webkit-datetime-edit-second-field,::-webkit-datetime-edit-millisecond-field,::-webkit-datetime-edit-meridiem-field{padding-top:0;padding-bottom:0}select{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");background-position:right 0.5rem center;background-repeat:no-repeat;background-size:1.5em 1.5em;padding-right:2.5rem;print-color-adjust:exact}[multiple],[size]:where(select:not([size="1"])){background-image:initial;background-position:initial;background-repeat:unset;background-size:initial;padding-right:0.75rem;print-color-adjust:unset}[type='checkbox'],[type='radio']{-webkit-appearance:none;appearance:none;padding:0;print-color-adjust:exact;display:inline-block;vertical-align:middle;background-origin:border-box;-webkit-user-select:none;user-select:none;flex-shrink:0;height:1rem;width:1rem;color:#2563eb;background-color:#fff;border-color:#6b7280;border-width:1px;--tw-shadow:0 0 #0000}[type='checkbox']{border-radius:0px}[type='radio']{border-radius:100%}[type='checkbox']:focus,[type='radio']:focus{outline:2px solid transparent;outline-offset:2px;--tw-ring-inset:var(--tw-empty,/*!*/ /*!*/);--tw-ring-offset-width:2px;--tw-ring-offset-color:#fff;--tw-ring-color:#2563eb;--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}[type='checkbox']:checked,[type='radio']:checked{border-color:transparent;background-color:currentColor;background-size:100% 100%;background-position:center;background-repeat:no-repeat}[type='checkbox']:checked{background-image:url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");}@media (forced-colors: active) {[type='checkbox']:checked{-webkit-appearance:auto;appearance:auto}}[type='radio']:checked{background-image:url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e");}@media (forced-colors: active) {[type='radio']:checked{-webkit-appearance:auto;appearance:auto}}[type='checkbox']:checked:hover,[type='checkbox']:checked:focus,[type='radio']:checked:hover,[type='radio']:checked:focus{border-color:transparent;background-color:currentColor}[type='checkbox']:indeterminate{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 16 16'%3e%3cpath stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8h8'/%3e%3c/svg%3e");border-color:transparent;background-color:currentColor;background-size:100% 100%;background-position:center;background-repeat:no-repeat;}@media (forced-colors: active) {[type='checkbox']:indeterminate{-webkit-appearance:auto;appearance:auto}}[type='checkbox']:indeterminate:hover,[type='checkbox']:indeterminate:focus{border-color:transparent;background-color:currentColor}[type='file']{background:unset;border-color:inherit;border-width:0;border-radius:0;padding:0;font-size:unset;line-height:inherit}[type='file']:focus{outline:1px solid ButtonText;outline:1px auto -webkit-focus-ring-color}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0px}.-bottom-8{bottom:-2rem}.-left-8{left:-2rem}.left-0{left:0px}.top-0{top:0px}.z-10{z-index:10}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.mb-10{margin-bottom:2.5rem}.mb-12{margin-bottom:3rem}.mb-24{margin-bottom:6rem}.mb-3{margin-bottom:0.75rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mt-1{margin-top:0.25rem}.mt-16{margin-top:4rem}.mt-2{margin-top:0.5rem}.block{display:block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.aspect-\[2\/3\]{aspect-ratio:2/3}.aspect-\[3\/4\]{aspect-ratio:3/4}.aspect-\[4\/5\]{aspect-ratio:4/5}.aspect-square{aspect-ratio:1 / 1}.h-12{height:3rem}.h-72{height:18rem}.h-\[2px\]{height:2px}.h-\[500px\]{height:500px}.h-full{height:100%}.min-h-\[1024px\]{min-height:1024px}.w-12{width:3rem}.w-16{width:4rem}.w-56{width:14rem}.w-full{width:100%}.w-px{width:1px}.max-w-7xl{max-width:80rem}.max-w-\[70\%\]{max-width:70%}.max-w-md{max-width:28rem}.max-w-xl{max-width:36rem}.cursor-pointer{cursor:pointer}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.flex-col{flex-direction:column}.items-start{align-items:flex-start}.items-end{align-items:flex-end}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-10{gap:2.5rem}.gap-12{gap:3rem}.gap-16{gap:4rem}.gap-24{gap:6rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-y-10 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(2.5rem * var(--tw-space-y-reverse))}.space-y-12 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(3rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(3rem * var(--tw-space-y-reverse))}.space-y-8 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(2rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(2rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.scroll-smooth{scroll-behavior:smooth}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:9999px}.rounded-xl{border-radius:9999px}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-outline{--tw-border-opacity:1;border-color:rgb(231 226 221 / var(--tw-border-opacity, 1))}.border-primary\/10{border-color:rgb(94 75 60 / 0.1)}.border-white\/10{border-color:rgb(255 255 255 / 0.1)}.border-white\/20{border-color:rgb(255 255 255 / 0.2)}.bg-background{--tw-bg-opacity:1;background-color:rgb(253 252 251 / var(--tw-bg-opacity, 1))}.bg-champagne{--tw-bg-opacity:1;background-color:rgb(249 246 243 / var(--tw-bg-opacity, 1))}.bg-outline{--tw-bg-opacity:1;background-color:rgb(231 226 221 / var(--tw-bg-opacity, 1))}.bg-primary{--tw-bg-opacity:1;background-color:rgb(94 75 60 / var(--tw-bg-opacity, 1))}.bg-surface-variant{--tw-bg-opacity:1;background-color:rgb(244 241 238 / var(--tw-bg-opacity, 1))}.bg-tertiary{--tw-bg-opacity:1;background-color:rgb(44 39 35 / var(--tw-bg-opacity, 1))}.bg-transparent{background-color:transparent}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-white\/5{background-color:rgb(255 255 255 / 0.05)}.object-cover{object-fit:cover}.p-10{padding:2.5rem}.p-2{padding:0.5rem}.px-10{padding-left:2.5rem;padding-right:2.5rem}.px-12{padding-left:3rem;padding-right:3rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-16{padding-top:4rem;padding-bottom:4rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-32{padding-top:8rem;padding-bottom:8rem}.py-5{padding-top:1.25rem;padding-bottom:1.25rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.pb-20{padding-bottom:5rem}.pb-4{padding-bottom:1rem}.pb-6{padding-bottom:1.5rem}.pt-12{padding-top:3rem}.pt-20{padding-top:5rem}.pt-24{padding-top:6rem}.pt-6{padding-top:1.5rem}.text-center{text-align:center}.font-body{font-family:Manrope}.font-headline{font-family:Noto Serif}.font-label{font-family:Manrope}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-5xl{font-size:3rem;line-height:1}.text-\[10px\]{font-size:10px}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-light{font-weight:300}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-\[1\.1\]{line-height:1.1}.leading-loose{line-height:2}.leading-relaxed{line-height:1.625}.leading-tight{line-height:1.25}.tracking-\[0\.2em\]{letter-spacing:0.2em}.tracking-\[0\.3em\]{letter-spacing:0.3em}.tracking-\[0\.4em\]{letter-spacing:0.4em}.tracking-\[0\.5em\]{letter-spacing:0.5em}.tracking-tighter{letter-spacing:-0.05em}.tracking-widest{letter-spacing:0.1em}.text-on-primary{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-on-surface{--tw-text-opacity:1;color:rgb(28 25 23 / var(--tw-text-opacity, 1))}.text-primary{--tw-text-opacity:1;color:rgb(94 75 60 / var(--tw-text-opacity, 1))}.text-secondary{--tw-text-opacity:1;color:rgb(140 131 125 / var(--tw-text-opacity, 1))}.text-tertiary{--tw-text-opacity:1;color:rgb(44 39 35 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-white\/40{color:rgb(255 255 255 / 0.4)}.text-white\/50{color:rgb(255 255 255 / 0.5)}.text-white\/60{color:rgb(255 255 255 / 0.6)}.text-white\/80{color:rgb(255 255 255 / 0.8)}.opacity-80{opacity:0.8}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.outline-none{outline:2px solid transparent;outline-offset:2px}.brightness-105{--tw-brightness:brightness(1.05);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.contrast-100{--tw-contrast:contrast(1);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.grayscale{--tw-grayscale:grayscale(100%);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-opacity{transition-property:opacity;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.duration-700{transition-duration:700ms}.selection\:bg-primary\/20 *::selection{background-color:rgb(94 75 60 / 0.2)}.selection\:bg-primary\/20::selection{background-color:rgb(94 75 60 / 0.2)}.hover\:scale-\[1\.02\]:hover{--tw-scale-x:1.02;--tw-scale-y:1.02;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:scale-\[1\.05\]:hover{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:bg-primary:hover{--tw-bg-opacity:1;background-color:rgb(94 75 60 / var(--tw-bg-opacity, 1))}.hover\:bg-tertiary:hover{--tw-bg-opacity:1;background-color:rgb(44 39 35 / var(--tw-bg-opacity, 1))}.hover\:bg-white:hover{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.hover\:text-primary:hover{--tw-text-opacity:1;color:rgb(94 75 60 / var(--tw-text-opacity, 1))}.hover\:text-tertiary:hover{--tw-text-opacity:1;color:rgb(44 39 35 / var(--tw-text-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:opacity-100:hover{opacity:1}.hover\:grayscale-0:hover{--tw-grayscale:grayscale(0);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.focus\:border-primary:focus{--tw-border-opacity:1;border-color:rgb(94 75 60 / var(--tw-border-opacity, 1))}.group:hover .group-hover\:translate-x-2{--tw-translate-x:0.5rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@media (min-width: 768px){.md\:col-span-4{grid-column:span 4 / span 4}.md\:flex{display:flex}.md\:grid-cols-12{grid-template-columns:repeat(12, minmax(0, 1fr))}.md\:flex-row{flex-direction:row}.md\:pt-24{padding-top:6rem}.md\:text-left{text-align:left}}@media (min-width: 1024px){.lg\:col-span-6{grid-column:span 6 / span 6}.lg\:block{display:block}.lg\:h-\[750px\]{height:750px}.lg\:grid-cols-12{grid-template-columns:repeat(12, minmax(0, 1fr))}.lg\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.lg\:gap-24{gap:6rem}.lg\:p-16{padding:4rem}.lg\:px-12{padding-left:3rem;padding-right:3rem}.lg\:text-2xl{font-size:1.5rem;line-height:2rem}.lg\:text-6xl{font-size:3.75rem;line-height:1}.lg\:text-7xl{font-size:4.5rem;line-height:1}}</style></head>
+<body class="bg-background text-on-surface font-body selection:bg-primary/20" data-mode="connect">
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 w-full bg-glass flex justify-between items-center px-6 lg:px-12 z-50 transition-all duration-300 py-3">
+<div class="text-xl lg:text-2xl font-headline uppercase tracking-[0.3em] text-on-surface">Angyali Szépségszalon</div>
+<div class="hidden md:flex gap-10 items-center">
+<a class="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface hover:text-primary transition-colors" href="#home">Kezdőlap</a>
+<a class="font-label text-[10px] uppercase tracking-[0.2em] text-secondary hover:text-primary transition-colors" href="#services">Szolgáltatások</a>
+<a class="font-label text-[10px] uppercase tracking-[0.2em] text-secondary hover:text-primary transition-colors" href="#gallery">Galéria</a>
+<a class="font-label text-[10px] uppercase tracking-[0.2em] text-secondary hover:text-primary transition-colors" href="#about">Rólam</a>
+<a class="font-label text-[10px] uppercase tracking-[0.2em] text-secondary hover:text-primary transition-colors" href="#contact">Kapcsolat</a>
+</div>
+<a class="hidden lg:block bg-primary text-on-primary px-8 py-2.5 rounded-full font-label text-[10px] uppercase tracking-[0.2em] hover:bg-tertiary transition-all" href="#contact">Foglalás</a>
+</nav>
+<!-- Hero/Home Section -->
+<section class="relative min-h-[1024px] flex items-center pt-24 pb-20 px-6 lg:px-12 overflow-hidden bg-background" data-stitch-vh="min-h-[1024px]===min-h-screen" id="home">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 max-w-7xl mx-auto items-center">
+<div class="lg:col-span-6 z-10 reveal active">
+<h2 class="text-primary uppercase tracking-[0.5em] text-[10px] mb-8 font-bold">DIGITÁLIS PRECIZITÁS</h2>
+<h1 class="font-headline leading-[1.1] mb-8 tracking-tighter text-on-surface italic text-4xl lg:text-6xl">ANGYALI SZÉPSÉGSZALON</h1>
+<p class="font-body text-xl text-secondary max-w-md leading-relaxed mb-12">Személyre szabott hajarchitektúra a modern sziluettért. Technológiai szentély, ahol a szerkezet találkozik a jövő esztétikájával.</p>
+<a class="group flex items-center bg-primary text-on-primary shadow-xl rounded-full transition-all hover:scale-[1.02] hover:bg-tertiary px-10 py-5 gap-3 inline-flex" href="#contact">
+<span class="font-label font-bold tracking-[0.2em] text-[10px]">IDŐPONTFOGLALÁS</span>
+<span class="material-symbols-outlined group-hover:translate-x-2 transition-transform text-lg">arrow_forward</span>
+</a>
+</div>
+<div class="lg:col-span-6 relative h-[500px] lg:h-[750px] w-full reveal active" style="transition-delay: 200ms;">
+<div class="absolute inset-0 bg-surface-variant overflow-hidden img-hover-zoom rounded-3xl">
+<img alt="Professional Salon Session" class="w-full h-full object-cover brightness-105 contrast-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsUI100Zsuxz-RrdHkpLe3_4MDlQYlvdsUPQ8DMoyFYRVx5ny5Ftshl2tHUWCdmPmcCQoupbA9Z4S2sg8ixaAkVpRzD35l9EkwNvkccX8kRH6WDxFMHc1LShoIXt--gYACnN5NxVOrSRpICdgbw1OfV7XkQG7fvpZnNBR_Lp3_Tg72MNdEnqu39f3fkfdVRVLCRkggG-IPUGC4r35N9bn4_CaTRMdcKPUJGdo0XHwRiG9S0JHLXNFdIYZEDqyIF_C4t3L-k1e0AFOd"/>
+</div>
+<div class="absolute -bottom-8 -left-8 w-56 h-72 bg-white p-2 shadow-2xl hidden lg:block border border-primary/10 rounded-xl">
+<img alt="Model with soft waves" class="w-full h-full object-cover rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYVQTUf6_j5JmN8Z1YAaSVUFJqjE83-HyaTvg_opLPvsNL6JmT0OozM2XVCIejEXedJeoH17K9O2aGZ4YNbfxzHh8N3I4GK3VKWwBHHoii2S5hZ9VPaScbyftYo7BPZtEj3KL1CygnpwGC0gUrijgm0b-nta16RZwKvRzWOBJCCT0t1LpqIFD39g-RBuEo4ENMjGvoqB50peBNWUWTTXbAwesWEJwajCy1fQrcWi3ZyF52r2uus4rzvsTXxc7ycqqig638uq-bF2cY"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section (Warm Brown Background) -->
+<section class="py-32 bg-primary text-on-primary overflow-hidden" id="services">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-end mb-24 gap-8 reveal active">
+<div class="max-w-xl">
+<h2 class="font-headline text-5xl mb-6 italic text-white">Szolgáltatások</h2>
+<p class="text-white/60 tracking-widest text-xs uppercase">Szigorúan technikai hajformázási protokollok.</p>
+</div>
+<div class="font-label text-[10px] uppercase tracking-[0.3em] text-white/80 border-b border-white/20 pb-4">AUTENTIKUS KONZULTÁCIÓ MINDEN ESETBEN</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-16 lg:gap-24 reveal active" style="transition-delay: 200ms;">
+<!-- Category: Architecture -->
+<div class="space-y-12">
+<h3 class="text-white font-bold tracking-[0.4em] uppercase text-[10px] border-b border-white/10 pb-6 flex justify-between">
+<span>ARCHITEKTÚRA</span>
+<span class="material-symbols-outlined text-white/50">architecture</span>
+</h3>
+<ul class="space-y-10">
+<li class="flex justify-between items-start group cursor-pointer">
+<div class="max-w-[70%]">
+<h4 class="font-headline text-xl text-white group-hover:translate-x-2 transition-transform duration-300">Digitális Vágás</h4>
+<p class="text-sm text-white/60 font-light italic mt-2">Geometriai pontosságon alapuló hajvágás.</p>
+</div>
+<span class="font-label text-white text-[10px] tracking-widest border border-white/20 px-3 py-1 mt-1 rounded-full">from $120</span>
+</li>
+<li class="flex justify-between items-start group cursor-pointer">
+<div class="max-w-[70%]">
+<h4 class="font-headline text-xl text-white group-hover:translate-x-2 transition-transform duration-300">Rekonstrukció</h4>
+<p class="text-sm text-white/60 font-light italic mt-2">Szerkezeti újjáépítés és formaadás.</p>
+</div>
+<span class="font-label text-white text-[10px] tracking-widest border border-white/20 px-3 py-1 mt-1 rounded-full">from $165</span>
+</li>
+</ul>
+</div>
+<!-- Category: Color -->
+<div class="space-y-12">
+<h3 class="text-white font-bold tracking-[0.4em] uppercase text-[10px] border-b border-white/10 pb-6 flex justify-between">
+<span class="">SZÍNKEZELÉS</span>
+<span class="material-symbols-outlined text-white/50">layers</span>
+</h3>
+<ul class="space-y-10">
+<li class="flex justify-between items-start group cursor-pointer">
+<div class="max-w-[70%]">
+<h4 class="font-headline text-xl text-white group-hover:translate-x-2 transition-transform duration-300">Flux Balayage</h4>
+<p class="text-sm text-white/60 font-light italic mt-2">Dimenziós színátmenetek folyékony technikával.</p>
+</div>
+<span class="font-label text-white text-[10px] tracking-widest border border-white/20 px-3 py-1 mt-1 rounded-full">from $240</span>
+</li>
+<li class="flex justify-between items-start group cursor-pointer">
+<div class="max-w-[70%]">
+<h4 class="font-headline text-xl text-white group-hover:translate-x-2 transition-transform duration-300">Chrome Gloss</h4>
+<p class="text-sm text-white/60 font-light italic mt-2">Fényvisszaverő felületkezelés a maximális ragyogásért.</p>
+</div>
+<span class="font-label text-white text-[10px] tracking-widest border border-white/20 px-3 py-1 mt-1 rounded-full">from $95</span>
+</li>
+</ul>
+</div>
+<!-- Category: Protocols -->
+<div class="space-y-12">
+<h3 class="text-white font-bold tracking-[0.4em] uppercase text-[10px] border-b border-white/10 pb-6 flex justify-between">
+<span>PROTOKOLL</span>
+<span class="material-symbols-outlined text-white/50">settings_input_component</span>
+</h3>
+<ul class="space-y-10">
+<li class="flex justify-between items-start group cursor-pointer">
+<div class="max-w-[70%]">
+<h4 class="font-headline text-xl text-white group-hover:translate-x-2 transition-transform duration-300">Kinetikus Rituálé</h4>
+<p class="text-sm text-white/60 font-light italic mt-2">Molekuláris szintű regeneráció.</p>
+</div>
+<span class="font-label text-white text-[10px] tracking-widest border border-white/20 px-3 py-1 mt-1 rounded-full">from $65</span>
+</li>
+<li class="flex justify-between items-start group cursor-pointer">
+<div class="max-w-[70%]">
+<h4 class="font-headline text-xl text-white group-hover:translate-x-2 transition-transform duration-300">Neural Scalp</h4>
+<p class="text-sm text-white/60 font-light italic mt-2">A fejbőr egyensúlyának technológiai helyreállítása.</p>
+</div>
+<span class="font-label text-white text-[10px] tracking-widest border border-white/20 px-3 py-1 mt-1 rounded-full">from $80</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery Section (Champagne Background) -->
+<section class="py-32 bg-champagne" id="gallery">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-24 reveal active">
+<h2 class="font-headline text-5xl italic mb-6 text-on-surface">Galéria</h2>
+<p class="font-body text-secondary uppercase tracking-[0.2em] text-[10px]">A legutóbbi hajarchitektúráink dokumentációja.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 reveal active">
+<div class="md:col-span-4 space-y-8">
+<div class="aspect-[4/5] bg-white overflow-hidden img-hover-zoom rounded-2xl">
+<img alt="Gallery Item" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDie8SMwj6WpXMYkuQ17_YsaWKmSS59OwrPvGjaJV5lM2EYnVk2Uu9Vq3KVQQIgmpo2jUA7wbXjwVufrnhcEV5a6Owpyg8FGNTHZxo_vGX3Mwt8boly49UUPEH842EEvLzFu2Yh7L56UuGq0M-WTYOxUvwFqawcD7sRnFnyWVRyjvHaZGiH4or8wzgfK7f36vvWiQdEwvPFrUjRzc-_Dsmshz2SpMX0iBjTa1ny0zcmly793TZeAdb-bIZbnZHcMVOsaCfN85Ygi3tH"/>
+</div>
+<div class="aspect-square bg-white overflow-hidden img-hover-zoom rounded-2xl">
+<img alt="Gallery Item" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBV-ZlDdR4prxs4oaKXud_FVA2RgwAOA3ptjiEaAL1r3vkRbJ_xxuzdFlkM5_tLJqpgwTgR2_k0ntw0OPHLPNKC0cQMVZVrrA7zc-ahul07AK1Szgtr7wvOV2aPiWstY9axvy6QXPWjIdWldsZBmtQbTu7LyXc-roqU0gfiNxWtp5aw2e5I1J1WNb2jpNOsvUHiypJAmSfAcOsjXiFlPHLTilh5eIO_df-nnWDP6ovMwbnqp4NMKxQNnAn4dETSRocuGPi2n7BSkues"/>
+</div>
+</div>
+<div class="md:col-span-4 pt-12 md:pt-24 space-y-8">
+<div class="aspect-[2/3] bg-white overflow-hidden img-hover-zoom rounded-2xl">
+<img alt="Gallery Item" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGnclh5qSqs9Wbrf-IBnjLmoW3jTqm1y1_K6cFNxzL6PzjCjgQiq-9qKcwF0gOWX3rVF_h6zmqiohKs_qkIxboeNH-N9QWAHppHZpOlzQBavj0aVeuJOPIZGeC0l77neC81KUYblc8NQbEjSIAHmbIu17nHUhHaFAJreorEZigw9xE68iUj9_qSIguWTNXEy0lr5yazOA7Kbbc2sTLL6zwI7ZC4429TQAV1BNlquZ8X4RKw3oYj4i_zokKBfbi4UvC__BBH6MyhhjZ"/>
+</div>
+</div>
+<div class="md:col-span-4 space-y-8">
+<div class="aspect-[4/5] bg-white overflow-hidden img-hover-zoom rounded-2xl">
+<img alt="Gallery Item" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgkrVqNx1j3KYWbcFSNQHpJ2fPZhIrsx3JYUNli4y0GscId2MrOHz_nEZ-1AwKk5RG13G5uzZ3FNW_ehNjF8si2iLLaJeV5RVykRceSzRC4KlUI_P8XqO9yg3lOPltSEAOPM_rNkTEMUhn7MEM-jaCvfDWzgAGEcQ2t06smcdMs5tXXfl3GiLRovXsOO4OHxtD7aSt588eSLKFIPn1dhX0zm9uaf_3E9F8lZI81vS_FDkei5ND29D1wl-rZ561gaoUTRFjl13DE6Xu"/>
+</div>
+<div class="aspect-square bg-white overflow-hidden img-hover-zoom rounded-2xl">
+<img alt="Gallery Item" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaumSipxTy6u9rmAXKRLtvSQxDyt8TYEtkrxFKKh-GMuBDa6U5_NQF2nlZCuuc6L4Jgj2IrJ7HIj7MldpGWsayhzYQsTQdza6ikDr7L9qUagXB1GHx9B2QH5skCix6R3I8zkWHyZLJRk3jqEEWX9NoIQwDKaGuHdMbQaiNSuu5_xEQLA3uNMLHKkbQ8S3lhDncbfsG0s0Tliw4NHuuFTOSBvkQ64VYz11jU3VqnUSQWa0bNm84xgZJmfCEobshRzEbY5jsODVfcBg6"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section (White Background) -->
+<section class="py-32 bg-white relative overflow-hidden" id="about">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+<div class="space-y-10 reveal">
+<div class="h-[2px] w-16 bg-primary"></div>
+<h2 class="font-headline text-5xl lg:text-6xl text-on-surface italic leading-tight">Ahol a mérnöki precizitás találkozik a <span class="text-primary">természetes</span> ritmussal.</h2>
+<p class="font-body text-lg text-secondary leading-loose">Az Angyali Szépségszalonban nem hiszünk a múló trendekben. Az építészetben hiszünk. Minden hajvágás az arányok matematikai gyakorlata, amelyet úgy alakítottunk ki, hogy ünnepelje az Ön egyedi vonásait. Filozófiánk a tiszta esztétikában gyökerezik – olyan haj, amely tökéletes marad a távozás pillanatától a következő látogatásig.</p>
+<div class="flex items-center gap-6 pt-6">
+<div class="text-center">
+<div class="text-3xl font-headline italic text-primary">12+</div>
+<div class="text-[10px] uppercase tracking-widest text-secondary mt-1">Év Tapasztalat</div>
+</div>
+<div class="w-px h-12 bg-outline"></div>
+<div class="text-center">
+<div class="text-3xl font-headline italic text-primary">4k+</div>
+<div class="text-[10px] uppercase tracking-widest text-secondary mt-1">Boldog Ügyfél</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-6 reveal" style="transition-delay: 200ms;">
+<div class="pt-20">
+<div class="img-hover-zoom border border-outline shadow-sm rounded-3xl">
+<img alt="Hair Detail" class="w-full aspect-[3/4] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBm2Tc0xS_F8HC0c3WMgcmKm5M9dHpriJV70SOatIuhYmQe06hBBf95dVdBmEe_vyc1ny56pwObVH4-YfRhyKAWkAD_G7S7Wto7S2bf5DZiCPXX3mfkteQAeAz9y86hbrN0AalVCE-mEz47784kwYa83HxltxF-aNr8ui4jYvETxK0CcoTspsLuG-0Q3odB7zdJIp9fey2ybPIS2n62B24AoLU8DBiB6PUFVXPvhuf5F3DqLlZ4BOjhhFvr8nEqxpk70W8VIMou3PNG"/>
+</div>
+</div>
+<div>
+<div class="img-hover-zoom border border-outline shadow-sm rounded-3xl">
+<img alt="Stylist Detail" class="w-full aspect-[3/4] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZcHWVTk9azXk64doGFKgmzh6ii7pIJDwd-GwqHKRkVUiyyXTHTqNhe9JHdJWMsODmF526l9emvKOsRsqHPDlNyfUsFP5YCpy0LQzZn9-2OAS2v1s0EXxI-jyPBpXtZGlw2AnfsndCTJXd9atlPJsZUrpxiXsTkzOKdFEeDHGaJv6KLIV4PGXXMixTB_tz5RLOTnNqGuPG9wd0qi-EfOf2wvvPgVfw9z7j_73_qBr5iFEDvUcXsp9hLzaY2DWmhB0VLs25lt3gvXHu"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section (Deep Umber Background) -->
+<section class="py-32 bg-tertiary text-white" id="contact">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 gap-24 items-start">
+<div class="reveal max-w-3xl mx-auto text-center flex flex-col items-center">
+<h2 class="font-headline text-5xl lg:text-7xl mb-8 italic">Kezdje el az evolúciót.</h2>
+<p class="text-white/60 mb-12 max-w-md">Lépjen velünk kapcsolatba egy konzultációért, vagy foglalja le következő időpontját rendszerünkön keresztül.</p>
+<div class="space-y-8">
+<div class="flex items-center gap-6 justify-center">
+<div class="w-12 h-12 bg-white/5 flex items-center justify-center rounded-full">
+<span class="material-symbols-outlined text-primary">location_on</span>
+</div>
+<div>
+<div class="text-[10px] uppercase tracking-widest text-white/40">Helyszín</div>
+<div class="font-headline italic text-lg">Budapest, Fashion Street 12.</div>
+</div>
+</div>
+<div class="flex items-center gap-6 justify-center">
+<div class="w-12 h-12 bg-white/5 flex items-center justify-center rounded-full">
+<span class="material-symbols-outlined text-primary">mail</span>
+</div>
+<div>
+<div class="text-[10px] uppercase tracking-widest text-white/40">Email</div>
+<div class="font-headline italic text-lg">hello@angyaliszalon.hu</div>
+</div>
+</div>
+<div class="flex items-center gap-6 justify-center">
+<div class="w-12 h-12 bg-white/5 flex items-center justify-center rounded-full">
+<span class="material-symbols-outlined text-primary">call</span>
+</div>
+<div>
+<div class="text-[10px] uppercase tracking-widest text-white/40">Telefon</div>
+<div class="font-headline italic text-lg">+36 70 123 4567</div>
+</div>
+</div>
+</div>
+<a class="mt-16 group flex items-center gap-4 bg-primary text-on-primary px-12 py-6 shadow-2xl rounded-full transition-all hover:scale-[1.05] hover:bg-white hover:text-tertiary inline-flex" href="#">
+<span class="font-label font-bold tracking-[0.3em] text-xs">ONLINE IDŐPONTFOGLALÁS</span>
+<span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">bolt</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full py-16 px-10 border-t border-outline bg-background flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto gap-8 transition-opacity opacity-80 hover:opacity-100">
+<div class="text-xl font-headline tracking-[0.4em] text-on-surface">Angyali Szépségszalon</div>
+<div class="font-body text-[10px] tracking-[0.2em] leading-relaxed text-secondary text-center md:text-left uppercase">
+        © 2024 Angyali Szépségszalon. System Version 3.0
+    </div>
+<div class="flex gap-10">
+<a class="text-[10px] uppercase tracking-widest text-secondary hover:text-primary transition-all" href="#">Instagram</a>
+<a class="text-[10px] uppercase tracking-widest text-secondary hover:text-primary transition-all" href="#">Privacy</a>
+<a class="text-[10px] uppercase tracking-widest text-secondary hover:text-primary transition-all" href="#">Legal</a>
+</div>
+</footer>
+<script>
+    // Simple Scroll Reveal Animation
+    const observerOptions = {
+        threshold: 0.1
+    };
 
-    <h1>Angyali Szépségszalon</h1>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, observerOptions);
 
-	<ul>
-      <li><a href="/posts/post-1/">Blog post</a></li>
-    </ul>
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-  </body>
-</html>
+    // Navbar Scroll Effect
+    window.addEventListener('scroll', () => {
+        const nav = document.querySelector('nav');
+        if (window.scrollY > 50) {
+            nav.classList.add('py-3');
+            nav.classList.remove('py-5');
+        } else {
+            nav.classList.add('py-5');
+            nav.classList.remove('py-3');
+        }
+    });
+</script>
+</body></html>
